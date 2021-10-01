@@ -28,7 +28,7 @@ Before getting started, please read this document carefully.
 
 # Submission
 
-Once you're satisfied with what you've built. Invite <github-user> to your provide repo and email your recruiter to inform the dev team.
+Once you're satisfied with what you've built. Invite *github-user* to your provide repo and email your recruiter to inform the dev team.
 
 # Getting started
 
