@@ -2,9 +2,9 @@
 
 Hello 👋,
 
-Thanks for taking the time to complete this brief take-home assignment . Please timebox your effort to a maximum of 3 hours.
+Thanks for taking the time to complete this brief take-home assignment. Please timebox your effort to a maximum of 3 hours.
 
-The goal of this exercise is to evaluate your backend skills (Node.js, ExpressJS, 3rd-party integration, and testing). Feel free to make any assumptions, simplifications, or other changes to the problems - though please state those in your write up when you submit this assignment. Please use as many libraries as is reasonable - there is no sense in rebuilding what has been built.
+The goal of this exercise is to evaluate your backend skills in developing lean microservices in JavaScript (Node.js, ExpressJS, 3rd-party integration, and testing). Feel free to make any assumptions, simplifications, or other changes to the problems - though please state those in your write up when you submit this assignment. Please use as many libraries as is reasonable - there is no sense in rebuilding what has been built. Feel at liberty to structure the microservice in a way that satisfies you.
 
 Using and Express.js you will create a REST endpoint to retrieve a list Bitcoin mining pools that give the best rewards per coin. Your consumers need to know the available coins and then search by the available coin to get the top 10 mining pools with the best rewards for a given coin.
 
