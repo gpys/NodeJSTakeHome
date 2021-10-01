@@ -45,7 +45,6 @@ In this boilerplate, you will find:
 - A `README.md` file to document your comments and design decisions
 - Inside the `package.json`, we added the following packages:
     - `express`
-    - `jest`
 
 # Minerstats API
 
