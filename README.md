@@ -16,10 +16,10 @@ Before getting started, please read this document carefully.
 
 - API must allow two things and must return JSON:
 
-  1. Allow users to pull back all coins available as demonimation for reward, and
+  1. Allow users to pull back all coins available as denomination for reward, and
   2. Allow users to search for mining pools with best rewards for a given coin
 
-- All crypto ExpressJS endpoints must be behind HTTP Bearer Authentication. Use the following credentials, hardcoding them on the backend: `user@rackspace.com`/`f2b0156f-cf95-4e29-9f57-51296a481c6a`
+- All crypto ExpressJS endpoints must be behind HTTP Bearer Authentication. Use the following credentials, hardcoding them on the backend: `user@test.com`/`f2b0156f-cf95-4e29-9f57-51296a481c6a`
 - Code must be tested using the framework of your choice
 - Document design decisions
 
@@ -32,17 +32,18 @@ Before getting started, please read this document carefully.
 
 # Submission
 
-Once you're satisfied with what you've built. Invite *github-user* to your provide repo and email your recruiter to inform the dev team.
+Once you're satisfied with what you've built, invite [Shane Sutro](https://github.com/ShaneSutro) to your forked repo and email Shane to inform the dev team to take a look.
 
 # Getting started
 
 With latest Node LTS installed, run the following commands:
+- `npm install`
 
 ## What will you find inside this boilerplate
 
 In this boilerplate, you will find:
 - The main entry file: `index.js`
-- A `README.md` file to document your comments and design decisions
+- A `DESIGN_EXPLANATION.md` file to document your comments and design decisions
 - Inside the `package.json`, we added the following packages:
     - `express`
 
