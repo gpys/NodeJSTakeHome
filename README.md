@@ -36,6 +36,7 @@ Once you're satisfied with what you've built, invite [Shane Sutro](https://githu
 
 # Getting started
 
+Fork this repository to your own account prior to beginning.
 With latest Node LTS installed, run the following commands:
 - `npm install`
 
