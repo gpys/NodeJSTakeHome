@@ -1,5 +1,5 @@
 
-
+//confirm correct username and bearer token are present in request
 const authCheck = (req, res, next) => {
   try {
     const bearer = req.headers.authorization;
@@ -20,8 +20,8 @@ const authCheck = (req, res, next) => {
       return next();
     } else throw new Error();
 
-    //catch errors and send to global error handler
   } 
+//catch errors and send to global error handler
   catch(e){
       return next({
         log: `error in authController, ${e}`,
