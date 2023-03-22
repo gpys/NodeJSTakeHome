@@ -1,7 +1,8 @@
-const express = require('express');
-const crypto = express();
+const { Router } = require('express');
+const crypto = Router();
 
-crypto.use()
+
+crypto.get('/')
 
 
 
