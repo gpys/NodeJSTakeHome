@@ -1,6 +1,7 @@
 const axios = require('axios');
 const NodeCache = require('node-cache');
-const coinUrl = 'https://api.minerstat.com/v2/coins';
+require('dotenv').config();
+const coinUrl = process.env.COIN_URL || 'https://api.minerstat.com/v2/coins'
 
 //initialize in memory cache and set time to live 5 minutes to save requests and have fresh data
 const cache = new NodeCache({stdTTL: 300000});
@@ -9,7 +10,7 @@ const cache = new NodeCache({stdTTL: 300000});
 // function to return list of all coins available as rewards
 const getAllRewards = async (req, res, next) => {
   try {
-    //check cache for data
+    //check cache for full list of coin data
     if (!cache.has(coinUrl)) {
         //retrieve list of data from minerstat
       const { data } = await axios.get(coinUrl);
@@ -30,7 +31,7 @@ const getAllRewards = async (req, res, next) => {
       log: {err: `error in cryptoController.getAllRewards: ${e}`},
       status: 500,
       message: 'error fetching reward coins',
-    })
+    });
   }
 };
 
@@ -49,7 +50,7 @@ const coinPools = async (req, res, next) => {
         }
         //retrieve cached total coin data
         const cachedData = cache.get(coinUrl);
-        //create array of pools with specified coin as reward
+        //create array of pools with specified coin as reward if reward data exists
         const allPools = cachedData.filter(el => el.reward_unit === coin && el.reward > -1);
         //put highest reward per hour at front of array
         allPools.sort((a, b) => b.reward - a.reward);
@@ -72,4 +73,4 @@ const coinPools = async (req, res, next) => {
     }
 };
 
-module.exports= {getAllRewards, coinPools};
+module.exports= {getAllRewards, coinPools, cache};
