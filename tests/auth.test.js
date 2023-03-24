@@ -1,9 +1,17 @@
+//import createServer function to start server and listen on default port. optional port param
 const createServer = require('../api/server');
-const app = createServer();
-
 const request = require('supertest');
 
-
+//initialize app variable for server instance
+let app;
+//start server instance before tests
+beforeAll(() => {
+  app = createServer();
+});
+//close server after tests
+afterAll((done) => {
+  app.close(done);
+});
 
 describe('authCheck middleware', () => {
 

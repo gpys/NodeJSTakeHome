@@ -1,13 +1,14 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+
 //import middleware
 const cryptoRouter = require('./cryptoRouter');
 const authCheck = require('./controllers/authController');
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
     res.send('Good luck!')
